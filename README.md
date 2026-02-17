@@ -1,33 +1,47 @@
-# 📊 Telecom Customer Churn Analysis
+# Telecom Churn Analysis: Data-Driven Retention Strategy
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Seaborn](https://img.shields.io/badge/Seaborn-444876?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-## 📌 Project Overview
-This project focuses on identifying the key drivers behind customer attrition (churn) for a Telecommunications company. Using **Python** and **Machine Learning**, I analyzed a dataset of 7,043 customers to provide actionable insights that help reduce the current **26.5% churn rate**.
+## 📋 Executive Summary
+This project delivers a comprehensive Exploratory Data Analysis (EDA) and predictive modeling assessment for a telecommunications provider. The goal was to diagnose the root causes of a **26.5% global churn rate** and provide actionable, data-backed recommendations to improve customer retention.
 
-This analysis was developed as part of the **Oracle Next Education (ONE)** program in collaboration with Alura Latam.
-
-## 🛠️ Tech Stack
-* **Language:** Python 3.13
-* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn
-* **Environment:** Jupyter Notebook / VS Code
-* **Methodology:** Exploratory Data Analysis (EDA) & Decision Tree Classification
-
-## 🔍 Key Findings
-* **The "6-Month Cliff":** Most Fiber Optic customers who churn do so within their first **6 months** of service.
-* **Contract Power:** Month-to-month contracts are the #1 predictor of churn. There is a strong negative correlation (**-0.40**) between contract duration and attrition.
-* **Service Friction:** Fiber Optic users coupled with Electronic Check payments represent the highest risk segment.
-
-## 📈 Visualizations
-The project includes several advanced visualizations to support the business case:
-1. **Waffle Chart:** Global churn distribution.
-2. **Feature Importance:** Mathematical ranking of variables impacting churn.
-3. **Density/Histogram Analysis:** Temporal distribution of customer loss.
-4. **Correlation Heatmap:** Statistical relationships between service variables.
-
-## 🚀 Strategic Recommendations
-1. **Contract Migration:** Implement incentives to move "Month-to-Month" users to 1 or 2-year plans.
-2. **Onboarding Program:** Design a 180-day "VIP Onboarding" for Fiber Optic users to mitigate early-stage churn.
-3. **Payment Optimization:** Promote automated credit card payments over electronic checks to reduce friction.
+> **Context:** Developed as part of the **Oracle Next Education (ONE)** specialization in Data Science & Analytics.
 
 ---
-**Author:** [Your Name]
-*Biotechnology Engineer | Aspiring Data Engineer*
+
+## 🔍 Key Strategic Insights
+
+### 📉 The "6-Month Cliff"
+Analysis of customer tenure reveals a critical drop-off point. **Fiber Optic** users exhibit the highest churn probability within their **first 6 months** of service.
+* **Strategic Action:** Implement a "VIP Onboarding" program during the first semester to mitigate early-stage friction.
+
+### 🧬 Contractual DNA
+Statistical correlation (**-0.40**) confirms that contract duration is the strongest predictor of retention.
+* **Observation:** "Month-to-month" contracts act as the primary leak in the revenue stream, while 1-year and 2-year contracts show near-zero churn.
+
+### 🌳 The "Churn Profile" (Decision Tree)
+Using a Decision Tree Classifier, we mapped the specific profile of a high-risk customer:
+1.  **Contract:** Month-to-Month
+2.  **Internet Service:** Fiber Optic
+3.  **Payment Method:** Electronic Check
+
+---
+
+## 🛠️ Technical Workflow
+This project simulates a real-world data analysis task, focusing on data quality and interpretability:
+
+* **Data Wrangling:** Transformed raw JSON/CSV data, handling missing values and encoding categorical features (e.g., converting 'Yes/No' text to binary integers) for machine learning compatibility.
+* **Statistical Analysis:** Generated Correlation Matrices to filter out noise and identify variables with true predictive power.
+* **Visual Storytelling:** Utilized **Waffle Charts** and **Density Plots** to communicate complex patterns to non-technical stakeholders effectively.
+
+---
+
+## 👤 About the Author
+**Kevin Mendoza**
+* 🧪 **Biotechnology Engineer** leveraging scientific rigor in Data Analytics.
+* ⚙️ **Aspiring Data Engineer:** Currently focused on mastering Python, SQL, and Data Pipelines to build scalable data infrastructure.
