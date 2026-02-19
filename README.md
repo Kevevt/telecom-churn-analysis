@@ -6,18 +6,35 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-444876?style=for-the-badge&logo=python&logoColor=white)
 
 ## 📋 Executive Summary
-This project delivers an end-to-end **Exploratory Data Analysis (EDA)** and predictive assessment for a telecommunications provider. By analyzing behavior patterns, I diagnosed the root causes of a **26.6% global churn rate** and developed data-driven strategies to recover potential revenue losses.
+This project delivers an end-to-end **Exploratory Data Analysis (EDA)** and predictive assessment for a telecommunications provider. By analyzing behavior patterns, I diagnosed the root causes of a **26.5% global churn rate** and developed data-driven strategies to recover potential revenue losses.
 
 > **Context:** Developed as part of the **Oracle Next Education (ONE)** specialization in Data Science & Analytics.
 
 ---
+## 📂 Project Structure
+
+```text
+challenge2-data-science-LATAM/
+│
+├── images/                      # Exported visualizations for documentation
+│   ├── decision_tree.png
+│   ├── feature_importance.png
+│   ├── global_churn.png
+│   └── tenure_churn.png
+├── README.md                    # Project documentation and insights
+├── TelecomX_Data.json           # Raw dataset
+├── TelecomX_diccionario.md      # Data dictionary/metadata
+└── TelecomX_LATAM.ipynb         # Main Jupyter Notebook with full EDA and modeling
+```
+---
+
 
 ## 🔍 Key Strategic Findings
 
-### 1. The "Critical Semester" (53% Risk) 📉
-Tenure analysis reveals a massive drop-off early in the customer lifecycle. **53.3% of all churn** occurs within the **first 6 months** of service.
-* **Insight:** If a customer survives the first semester, their retention probability increases by over 40%.
-* **Strategy:** Implement a "First 180 Days" loyalty program for new users.
+### 1. The "Critical Semester" (~42% of Total Churn) 📉
+Tenure analysis reveals a massive drop-off early in the customer lifecycle. **41.9% of all historical churn (783 out of 1,869 lost customers)** occurs within the **first 6 months** of service.
+* **Insight:** If a customer survives the first semester, the retention probability stabilizes as the churn curve flattens.
+* **Strategy:** Implement a "First 180 Days" VIP onboarding and loyalty program for new users.
 
 ### 2. Contract Stability 📄
 Statistical analysis confirms that **Month-to-Month** contracts are the primary volatility factor. Transitioning users to 1-year plans drastically reduces exit probability.
@@ -36,24 +53,33 @@ Using a Decision Tree Classifier, we mapped the specific high-risk profile:
   <img src="images/global_churn.png" width="380">
 </div>
 
-> **Insight:** We are currently losing **1 in 4 customers** (~26%). This visualizes the immediate impact on revenue stability.
+> **Insight:** We are currently losing **1 in 4 customers** (~26.5%). In absolute volume, out of a base of 7,043 clients, **1,869 have canceled** their service. This visualizes the immediate impact on revenue stability.
 
 ---
 
 ### 2. The "6-Month Cliff" (Critical Insight)
-![Tenure Churn](images/tenure_churn.png)
-> **Insight:** The red dotted line marks the danger zone. **53.3% of churn events** happen within the first half-year. If we retain a user past month 6, their lifetime value increases significantly.
+<div align="center">
+  <img src="images/tenure_churn.png" width="820">
+</div>
+
+> **Insight:** The red dotted line marks the danger zone. **41.9% of all churn events (783 customers)** happen within the first half-year. If we retain a user past month 6, their lifetime value and stability increase significantly.
 
 ---
 
 ### 3. What Drives the Exit? (Mathematical Proof)
-![Feature Importance](images/feature_importance.png)
+<div align="center">
+  <img src="images/feature_importance.png" width="820">
+</div>
+
 > **Insight:** Unlike common intuition, demographics (Gender, Partner) matter very little. The **Contract Type** and **Internet Service** technical specs are the true drivers of dissatisfaction.
 
 ---
 
 ### 4. The Path to Churn (Decision Rules)
-![Decision Tree](images/decision_tree.png)
+<div align="center">
+  <img src="images/decision_tree.png" width="820">
+</div>
+
 > **Insight:** A specific "Toxic Combo" was identified: Customers with a **Month-to-Month contract**, using **Fiber Optic**, and paying via **Electronic Check** have the highest probability of leaving.
 
 ---
