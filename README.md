@@ -31,7 +31,11 @@ Using a Decision Tree Classifier, we mapped the specific high-risk profile:
 ## 📊 Visual Analysis Gallery
 
 ### 1. The Scale of the Problem
-![Global Churn](images/global_churn.png)
+
+<div align="center">
+  <img src="images/global_churn.png" width="380">
+</div>
+
 > **Insight:** We are currently losing **1 in 4 customers** (~26%). This visualizes the immediate impact on revenue stability.
 
 ---
